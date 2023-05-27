@@ -1,0 +1,50 @@
+.cakes{
+    padding: 1em;
+    h2{
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--blue);
+    }
+    .cakes-container{
+        .cake{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 2em 0;
+            &:nth-child(2){
+                .cake-info{
+                    order: 1;
+                }
+            }
+            .cake-info{
+                width: 55%;
+                h3{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: var(--blue);
+                    margin-bottom: 1em;
+                }
+                p{
+                    font-size: 10px;
+                    font-weight: 400;
+                    text-align: justify;
+                    color: var(--blue);
+                }
+            }
+            .cake-img{
+                width: 100px;
+                height: 100px;
+                align-self: center;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 0 .5em;
+                    background-color: var(--dark-cream);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

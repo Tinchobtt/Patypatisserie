@@ -1,0 +1,16 @@
+@keyframes bar1{
+    25%{
+        transform: translateY(14px);
+    }
+    100%{
+        transform: translateY(14px) rotate(-405deg);
+    }
+}
+@keyframes bar3{
+    25%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(-15px) rotate(-315deg);
+    }
+}
