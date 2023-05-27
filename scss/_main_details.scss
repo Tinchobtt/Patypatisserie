@@ -1,0 +1,28 @@
+#details{
+    position: relative;
+    height: 40vh;
+    background-color: var(--light-cream);
+    .details-img{
+        position: absolute;
+        top: 0;
+        left: -15%;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    p{
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        width: 40%;
+        font-size: 14px;
+        font-style: italic;
+        color: var(--blue);
+        text-align: center;
+    }
+}
