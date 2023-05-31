@@ -7,9 +7,14 @@
 }
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 body{
-    background-color: var(--cream);
+    background-color: var(--white);
     overflow-x: hidden;
+}
+.dist{
+    min-height: 100vh;
+    .main{
+        min-height: calc(100vh - 250px);
+    }
 }

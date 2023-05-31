@@ -1,0 +1,36 @@
+.xl-text{
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--blue);
+    font-family: 'Playfair Display', serif;
+}
+.l-text{
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+.m-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+.s-text{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--blue);
+}
+
+.wpp{
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    i{
+        font-size: 68px;
+        color: var(--red);
+    }
+}

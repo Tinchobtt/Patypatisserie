@@ -1,0 +1,18 @@
+#nosotros{
+    padding: 2rem 1rem;
+    h2{
+        font-size: 22px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: center;
+        color: var(--blue);
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        text-align: justify;
+        color: var(--blue);
+        line-height: 25px;
+    }
+}

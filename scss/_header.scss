@@ -1,13 +1,22 @@
 header{
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100vw;
     height: 100px;
-    background-color: var(--dark-cream);
+    background-color: var(--cream);
+    z-index: 5;
     .logo-container{
-        width: 7em;
+        width: 6.5em;
         padding: .5em 1em;
-        img{
-            width: 100%;
+        a{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            img{
+                width: 100%;
+            }
         }
     }
     .navigation-container{
@@ -39,16 +48,16 @@ header{
             }
         }
         .media-container{
+            display: flex;
+            justify-content: center;
             .media{
                 display: flex;
-                justify-content: center;
-                margin: 5em 0;
+                justify-content: space-around;
+                width: 50%;
+                margin: 5rem 0 2rem 0;
                 margin-right: 25%;
                 .media-item{
                     list-style: none;
-                    &:last-child{
-                        margin-left: 1em;
-                    }
                     .media-link{
                         font-size: 36px;
                         text-decoration: none;
@@ -98,5 +107,68 @@ header{
     }
     .showNav{
         transform: translateX(25%);
+    }
+}
+@media (min-width: 1024px){
+    header{
+        height: 120px;
+        .logo-container{
+            width: 8rem;
+            margin-left: 1rem;
+        }
+        .navigation-container{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            position: unset;
+            transform: translateX(0);
+            background-color: var(--cream);
+            height: 100%;
+            .nav{
+                margin-top: 0;
+                height: 50%;
+                margin-right: 1rem;
+                .nav-bar{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    .nav-item{
+                        margin: 0;
+                        margin-right: 2rem;
+                        .nav-link{
+                            font-size: 24px;
+                            font-weight: 300;
+                            color: var(--blue);
+                        }
+                        #active{
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .media-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                order: -1;
+                height: 50%;
+                margin-right: 1rem;
+                .media{
+                    width: auto;
+                    margin: 0;
+                    .media-item{
+                        list-style: none;
+                        margin-right: 2rem;
+                        .media-link{
+                            font-size: 32px;
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+        }
+        .bars-menu{
+            display: none;
+        }
     }
 }
