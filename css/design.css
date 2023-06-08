@@ -90,7 +90,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100vw;
   height: 100px;
@@ -269,7 +269,6 @@ header .showNav {
   gap: 0.5rem;
   position: relative;
   height: 200px;
-  margin-top: 100px;
   padding: 1rem 0;
   overflow: hidden;
 }
@@ -348,22 +347,17 @@ header .showNav {
   justify-content: space-between;
   width: 100%;
   height: 140px;
-  margin: 2em 0;
+  margin: 2rem 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(40, 82, 129, 0.2588235294);
-}
-.cakes .cakes-container .cake .inverse {
-  order: 1;
-  margin-left: 1em;
-  margin-right: 0;
 }
 .cakes .cakes-container .cake:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
 .cakes .cakes-container .cake .cake-info {
-  max-width: 60%;
-  margin-right: 1em;
+  width: calc(100% - 100px);
+  margin-right: 1rem;
   align-self: center;
 }
 .cakes .cakes-container .cake .cake-info h3 {
@@ -373,14 +367,20 @@ header .showNav {
   margin-bottom: 10px;
 }
 .cakes .cakes-container .cake .cake-info p {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   text-align: justify;
   color: var(--blue);
 }
+.cakes .cakes-container .cake .inverse {
+  order: 1;
+  margin-left: 1rem;
+  margin-right: 0;
+}
 .cakes .cakes-container .cake .cake-img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1;
   align-self: center;
 }
 .cakes .cakes-container .cake .cake-img img {
@@ -392,6 +392,64 @@ header .showNav {
   border-radius: 10px;
 }
 
+@media (min-width: 280px) {
+  .cakes .cakes-container .cake .cake-info {
+    width: calc(100% - 120px);
+  }
+  .cakes .cakes-container .cake .cake-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (min-width: 425px) {
+  .cakes .cakes-container .cake {
+    width: calc(100% - 2rem);
+    height: 180px;
+    margin: 2rem 1rem;
+  }
+  .cakes .cakes-container .cake .cake-info {
+    width: calc(100% - 150px);
+    margin-right: 2rem;
+  }
+  .cakes .cakes-container .cake .cake-info h3 {
+    font-size: 16px;
+  }
+  .cakes .cakes-container .cake .cake-info p {
+    font-size: 12px;
+  }
+  .cakes .cakes-container .cake .inverse {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+  .cakes .cakes-container .cake .cake-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 500px) {
+  .cakes .cakes-container .cake .cake-info h3 {
+    font-size: 18px;
+  }
+  .cakes .cakes-container .cake .cake-info p {
+    font-size: 14px;
+  }
+} /*
+@media (min-width: 768px){
+    .cakes{
+        .cakes-container{
+            .cake{
+                height: 230px;
+                .cake-info{
+
+                }
+                .cake-img{
+
+                }
+            }
+        }
+    }
+}
+*/
 #details {
   display: flex;
   width: 100%;
