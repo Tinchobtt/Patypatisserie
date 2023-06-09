@@ -5,27 +5,32 @@ footer{
     justify-items: center;
     gap: 1em;
     padding: 1.5em 1em;
-    height: 150px;
+    height: 200px;
     background-color: var(--dark-cream);
     .nav-footer{
         height: 100%;
         .nav-bar{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             height: 100%;
             .nav-item{
                 list-style: none;
+                margin-bottom: 1rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
                 .nav-link{
                     text-decoration: none;
                     color: var(--blue);
-                    font-size: 16px;
+                    font-size: clamp(16px, 3vw, 22px);
+                    font-weight: 500;
                 }
             }
         }
     }
     .logo-container{
-        width: 5em;
+        width: 6em;
         img{
             width: 100%;
             opacity: .75;
@@ -36,21 +41,73 @@ footer{
         .redes{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             height: 100%;
             .red-item{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 list-style: none;
-                margin-bottom: 8px;
+                margin-bottom: 1rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
                 .red-link{
                     i{
-                        font-size: 22px;
+                        font-size: clamp(22px, 4vw, 32px);
                         color: var(--blue);
                     }
                     span{
                         display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 600px){
+    footer{
+        .logo-container{
+            width: 8rem;
+        }
+    }
+}
+@media (min-width: 1024px){
+    footer{
+        .nav-footer{
+            .nav-bar{
+                .nav-item{
+                    &:hover .nav-link{
+                        color: var(--blue-hover);
+                    }
+                    .nav-link{
+                        transition: color .3s;
+                    }
+                }
+            }
+        }
+        .logo-container{
+            width: 9.5rem;
+            transition: transform .5s;
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+        }
+        .redes-container{
+            .redes{
+                .red-item{
+                    &:hover .red-link i{
+                        color: var(--blue-hover);
+                    }
+                    .red-link{
+                        i{
+                            font-size: clamp(22px, 4vw, 32px);
+                            color: var(--blue);
+                            transition: color .5s;
+                        }
+                        span{
+                            display: none;
+                        }
                     }
                 }
             }

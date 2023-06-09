@@ -15,6 +15,21 @@ body{
 .dist{
     min-height: 100vh;
     .main{
-        min-height: calc(100vh - 250px);
+        min-height: calc(100vh - 300px);
+    }
+}
+@media (min-width: 1024px){
+    .dist{
+        min-height: 100vh;
+        .main{
+            min-height: calc(100vh - 320px);
+        }
+    }
+}
+@media (min-width: 2000px){
+    body{
+        max-width: 2000px;
+        margin: auto;
+        background-color: var(--red);
     }
 }
